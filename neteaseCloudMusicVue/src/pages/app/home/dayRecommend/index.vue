@@ -5,9 +5,9 @@
     </div>
     <div class="recommend-list wrap">
       <div class="recommend-item clx" v-for="(item, index) in recommendList" :key="index">
-        <img :src="item.album.blurPicUrl" class="album-img">
+        <img :src="item.al.picUrl" class="album-img">
         <div class="music-name">{{ item.name }}</div>
-        <div class="music-info">{{ item.artists[0].name }} - {{ item.album.name }}</div>
+        <div class="music-info">{{ item.ar[0].name }} - {{ item.al.name }}</div>
         <img src="../../../../assets/icon/mv-icon.png" v-if="item.mvid !== 0" class="mv-icon">
       </div>
     </div>
