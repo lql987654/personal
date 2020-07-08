@@ -40,3 +40,12 @@ export const getHistoryRecommendList = (data) => {
 export const getTopList = (data) => {
   return GET('/toplist', data)
 };
+/*
+     云村 相关接口
+ */
+export const getHotWallList = (data) => {
+  return GET('/comment/hotwall/list', data)
+};
+export const getHotTopicList = (data) => {
+  return GET('/hot/topic', data)
+};

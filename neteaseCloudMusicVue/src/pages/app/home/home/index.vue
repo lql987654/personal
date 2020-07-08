@@ -1,6 +1,5 @@
 <template>
   <div class="">
-    <router-view/>
     <!-- banner轮播   -->
     <div class="banner wrap">
       <mt-swipe :auto="4000">
@@ -24,6 +23,8 @@
     <div class="music-list wrap">
       <h2>宝藏歌单，值得聆听</h2>
     </div>
+
+    <buttonNav></buttonNav>
   </div>
 </template>
 
@@ -33,7 +34,10 @@
     getRecommendMusicList,
   } from '@/service'
 
+  import buttonNav from "@/components/bottom-nav/ButtonNav";
+
   export default {
+    components: {buttonNav},
     name: "Home",
     data() {
       return {
