@@ -32,7 +32,7 @@
         })
       },
       getUserPlayListFunc() {
-        let userId = this.$store.state.publicStatus.user;
+        let userId = this.$store.state.publicStatus;
         console.log(userId)
         getUserPlayList(userId).then( res=> {
           console.log(res)

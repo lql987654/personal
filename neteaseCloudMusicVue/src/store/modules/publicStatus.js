@@ -3,7 +3,7 @@ export default {
   namespaced: true,
   state: {
     history_url: '/',
-    user: { },//用户信息
+    user: "",//用户信息
   },
   mutations: {
     login(state, user_data) {
