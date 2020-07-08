@@ -48,6 +48,7 @@
             if(res.code === 200) {
               this.toast('登录成功');
               this.$router.push({ path: '/' });
+              this.$store.commit('publicStatus/login', JSON.stringify(res.account))
             } else {
               this.toast(res.message);
             }

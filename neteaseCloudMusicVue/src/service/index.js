@@ -49,3 +49,14 @@ export const getHotWallList = (data) => {
 export const getHotTopicList = (data) => {
   return GET('/hot/topic', data)
 };
+
+/* ************* 我的 相关接口 ******************* */
+
+// 获取用户信息 , 歌单，收藏，mv, dj 数量
+export const getUserSubcount = (data) => {
+  return GET('/user/subcount', data)
+};
+// 获取用户歌单
+export const getUserPlayList = (data) => {
+  return GET('/user/playlist', data)
+};
