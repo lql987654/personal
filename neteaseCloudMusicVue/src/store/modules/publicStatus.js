@@ -3,13 +3,15 @@ export default {
   namespaced: true,
   state: {
     history_url: '/',
-    user: "",//用户信息
+    user: {
+      id: ''
+    },//用户信息
   },
   mutations: {
     login(state, user_data) {
       let data = JSON.parse(user_data);
-      state.user = data.id;
-      console.log(state.user)
+      state.user.id = data.id;
+      localStorage.setItem("user", JSON.stringify(data));
     },
   },
   actions: {

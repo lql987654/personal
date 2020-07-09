@@ -12,7 +12,7 @@
   } from '@/service'
 
   import buttonNav from "@/components/bottom-nav/ButtonNav";
-  import store from "@/store/index"
+
   export default {
     components: {buttonNav},
     name: "mineIndex",
@@ -32,9 +32,8 @@
         })
       },
       getUserPlayListFunc() {
-        let userId = this.$store.state.publicStatus;
-        console.log(userId)
-        getUserPlayList(userId).then( res=> {
+        let data = JSON.parse(localStorage.getItem("user"));
+        getUserPlayList({ uid: data.id}).then( res=> {
           console.log(res)
         })
       }
