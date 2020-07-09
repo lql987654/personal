@@ -60,3 +60,7 @@ export const getUserSubcount = (data) => {
 export const getUserPlayList = (data) => {
   return GET('/user/playlist', data)
 };
+/* ************* 歌曲 相关接口 ******************* */
+export const getSongUrl = (data) => {
+  return GET('/song/url', data)
+};

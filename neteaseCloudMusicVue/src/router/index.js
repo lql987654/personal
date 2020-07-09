@@ -137,7 +137,26 @@ export default new Router({
           component: r => require.ensure([], () => r(require('@/pages/app/account/index/index.vue')), 'accountIndex')
         }
       ]
-    }
+    },
+    /*  播放歌曲页面路由  */
+    {
+      path: '/music',
+      name: "index",
+      meta: {
+        requireAuth : true
+      },
+      component: r => require.ensure([], () => r(require('@/pages/app/index.vue')), 'index'),
+      children: [
+        {
+          path: '/music/index/:musicId',
+          meta: {
+            requireAuth : true
+          },
+          name: 'playMusic',
+          component: r => require.ensure([], () => r(require('@/pages/app/music/playMusic/index.vue')), 'musicIndex')
+        }
+      ]
+    },
   ]
 })
 

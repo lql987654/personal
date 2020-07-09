@@ -4,7 +4,7 @@
       <img src="../../../../assets/bg/day-recommend-bg.jpg">
     </div>
     <div class="recommend-list wrap">
-      <div class="recommend-item clx" v-for="(item, index) in recommendList" :key="index">
+      <div class="recommend-item clx" v-for="(item, index) in recommendList" :key="index" @click="toPlayMusicPage(item.id)">
         <img :src="item.al.picUrl" class="album-img">
         <div class="music-name">{{ item.name }}</div>
         <div class="music-info">{{ item.ar[0].name }} - {{ item.al.name }}</div>
@@ -49,6 +49,9 @@
         let month = new Date().getMonth() + 1;
         let day = new Date().getDay() + 1;
         this.date = date[month, day]
+      },
+      toPlayMusicPage(id) {
+        this.$router.push({ path: `/music/index/${id}` });
       }
     }
   }
