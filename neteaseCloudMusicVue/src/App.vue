@@ -37,4 +37,7 @@ export default {
     visibility: hidden;
     overflow: hidden;
   }
+  #app {
+    height: 100%;
+  }
 </style>

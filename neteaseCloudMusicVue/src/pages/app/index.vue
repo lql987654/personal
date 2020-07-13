@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <router-view/>
   </div>
 </template>
@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+.container {
+  height: 100%;
+}
 </style>

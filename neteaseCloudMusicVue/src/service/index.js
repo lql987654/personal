@@ -61,6 +61,15 @@ export const getUserPlayList = (data) => {
   return GET('/user/playlist', data)
 };
 /* ************* 歌曲 相关接口 ******************* */
+// 获取歌曲url
 export const getSongUrl = (data) => {
   return GET('/song/url', data)
 };
+// 获取歌曲歌词
+export const getSonglylic = (data) => {
+  return GET('/lyric', data)
+}
+// 获取歌曲评论
+export const getSongComment = (data) => {
+  return GET('/comment/music', data)
+}
