@@ -23,7 +23,7 @@
       </scroll>
     </div>
     <!-- 个人功能部分   -->
-    <div class="personal-function-box">
+    <div class="personal-function-box" v-show="!lyricShowStatus">
       <div :class="likeData.changeLike" @click="getSongLikeStatusFunc('change')"></div>
       <div class="item-comment" @click="showCommentList"></div>
     </div>
@@ -33,6 +33,8 @@
       <MusicComment
         :commentsList="commentDetail.commentsList"
         :hotCommentsList="commentDetail.hotCommentsList"
+        :commentDetailALL="commentDetail.commentDetailALL"
+        @hideFatherFunc="hideCommentList"
         v-show="showCommentListStatus"
       >
       </MusicComment>
@@ -81,7 +83,8 @@
         showCommentListStatus: false,
         commentDetail: {
           commentsList: [],
-          hotCommentsList: []
+          hotCommentsList: [],
+          commentDetailALL: {}
         }
       }
     },
@@ -149,7 +152,7 @@
 
           this.commentDetail.commentsList = comments;
           this.commentDetail.hotCommentsList = res.hotComments;
-
+          this.commentDetail.commentDetailALL = res
           this.commentDetailStatus = true
         })
       },
@@ -176,6 +179,10 @@
       },
       showCommentList() {
         this.showCommentListStatus = true
+      },
+      hideCommentList() {
+        console.log(1)
+        this.showCommentListStatus = false
       }
     }
   }
