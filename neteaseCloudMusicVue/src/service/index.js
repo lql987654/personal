@@ -73,3 +73,11 @@ export const getSonglylic = (data) => {
 export const getSongComment = (data) => {
   return GET('/comment/music', data)
 }
+// 获取歌曲详情
+export const getSongDetail = (data) => {
+  return GET('/song/detail', data)
+}
+// 修改喜欢该歌曲
+export const getSongLikeStatus = (data) => {
+  return GET('/like', data)
+}
