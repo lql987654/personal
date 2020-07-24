@@ -22,6 +22,10 @@ export const getHotMusicTagList = (data) => {
 export const getRecommendMusicList = (data) => {
   return GET('/recommend/resource', data)
 };
+// 发现列表
+export const getHomePageFind = (data) => {
+  return GET('/homepage/block/page', data)
+};
 /*
   首页 每日推荐 相关接口
  */
@@ -34,6 +38,7 @@ export const getDayRecommendSong = (data) => {
 export const getHistoryRecommendList = (data) => {
   return GET('/history/recommend/songs', data)
 };
+
 /*
   首页 排行榜 相关接口
  */
@@ -80,4 +85,38 @@ export const getSongDetail = (data) => {
 // 修改喜欢该歌曲
 export const getSongLikeStatus = (data) => {
   return GET('/like', data)
+}
+/* ************* 搜索 相关接口 ******************* */
+// 搜索
+export const getSearch = (data) => {
+  return GET('/search', data)
+}
+// 默认搜索关键词
+export const getSearchDefault = (data) => {
+  return GET('/search/default', data)
+}
+// 热搜列表 简略
+export const getSearchHot = (data) => {
+  return GET('/search/hot', data)
+}
+// 热搜列表 详细
+export const getSearchHotDetail = (data) => {
+  return GET('/search/hot/detail', data)
+}
+/* ************* 视频 相关接口 ******************* */
+// 获取全部视频
+export const getAllVideo = (data) => {
+  return GET('/video/timeline/all', data)
+}
+// 获取视频标签列表
+export const getGroupVideoTag = (data) => {
+  return GET('/video/group/list', data)
+}
+// 获取视频分类列表
+export const getCategoryVideoTag = (data) => {
+  return GET('/video/category/list', data)
+}
+// 获取视频分类列表下的视频
+export const getCategoryVideo = (data) => {
+  return GET('/video/group', data)
 }

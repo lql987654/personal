@@ -204,11 +204,19 @@
     height: 6rem;
     margin-top: -3rem;
     margin-left: -3rem;
+    overflow: hidden;
+  }
+  .music-play-box:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
     background: url("../../../../assets/play-music/music-bg.png") center no-repeat;
     background-size: 100%;
     animation: rotate 6s linear infinite;
     z-index: 1;
-    overflow: hidden;
+    content: '';
   }
   @keyframes rotate {
     0% {
@@ -237,6 +245,7 @@
     margin-left: -2rem;
     margin-top: -2rem;
     border-radius: 50%;
+    animation: rotate 6s linear infinite;
   }
   .play-icon {
     position: absolute;

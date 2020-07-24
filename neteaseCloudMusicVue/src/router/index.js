@@ -30,7 +30,7 @@ export default new Router({
     /*       首页路由        */
     {
       path: '/',
-      name: "index",
+      name: "home",
       meta: {
         requireAuth : true
       },
@@ -65,7 +65,7 @@ export default new Router({
     /*       我的页面路由        */
     {
       path: '/mine',
-      name: "index",
+      name: "mine",
       meta: {
         requireAuth : true
       },
@@ -84,7 +84,7 @@ export default new Router({
     /*       视频页面路由        */
     {
       path: '/video',
-      name: "index",
+      name: "video",
       meta: {
         requireAuth : true
       },
@@ -103,7 +103,7 @@ export default new Router({
     /*       云村页面路由        */
     {
       path: '/community',
-      name: "index",
+      name: "community",
       meta: {
         requireAuth : true
       },
@@ -122,7 +122,7 @@ export default new Router({
     /*       账户页面路由        */
     {
       path: '/account',
-      name: "index",
+      name: "account",
       meta: {
         requireAuth : true
       },
@@ -141,7 +141,7 @@ export default new Router({
     /*  播放歌曲页面路由  */
     {
       path: '/music',
-      name: "index",
+      name: "music",
       meta: {
         requireAuth : true
       },
@@ -154,6 +154,33 @@ export default new Router({
           },
           name: 'playMusic',
           component: r => require.ensure([], () => r(require('@/pages/app/music/playMusic/index.vue')), 'musicIndex')
+        }
+      ]
+    },
+    /*  搜索页面路由  */
+    {
+      path: '/search',
+      name: "search",
+      meta: {
+        requireAuth : true
+      },
+      component: r => require.ensure([], () => r(require('@/pages/app/index.vue')), 'index'),
+      children: [
+        {
+          path: '/search/index',
+          meta: {
+            requireAuth : true
+          },
+          name: 'searchPage',
+          component: r => require.ensure([], () => r(require('@/pages/app/search/searchPage/index.vue')), 'searchPage')
+        },
+        {
+          path: '/search/:keyword',
+          meta: {
+            requireAuth : true
+          },
+          name: 'searchResult',
+          component: r => require.ensure([], () => r(require('@/pages/app/search/searchResult/index.vue')), 'searchResult')
         }
       ]
     },
