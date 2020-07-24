@@ -1,6 +1,6 @@
 <template>
-  <div>
-    我的
+  <div class="mine-container">
+    <h2>这个页面实在是没什么接口可用 留着做别的了</h2>
     <buttonNav></buttonNav>
   </div>
 </template>
@@ -42,5 +42,8 @@
 </script>
 
 <style scoped>
-
+  .mine-container {
+    font-size: .3rem;
+    color: #333;
+  }
 </style>

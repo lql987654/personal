@@ -120,3 +120,15 @@ export const getCategoryVideoTag = (data) => {
 export const getCategoryVideo = (data) => {
   return GET('/video/group', data)
 }
+// 获取视频详情
+export const getVideoDetail = (data) => {
+  return GET('/video/detail', data)
+}
+// 获取视频播放地址
+export const getVideoUrl = (data) => {
+  return GET('/video/url', data)
+}
+// 获取视频相关信息
+export const getVideoInfo = (data) => {
+  return GET('/video/detail/info', data)
+}

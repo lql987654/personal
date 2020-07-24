@@ -97,6 +97,14 @@ export default new Router({
           },
           name: '视频',
           component: r => require.ensure([], () => r(require('@/pages/app/video/index/index.vue')), 'videoIndex')
+        },
+        {
+          path: '/video/:id',
+          meta: {
+            requireAuth : true
+          },
+          name: 'videoDetail',
+          component: r => require.ensure([], () => r(require('@/pages/app/video/videoDetail/index.vue')), 'videoDetail')
         }
       ]
     },
