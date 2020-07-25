@@ -56,8 +56,10 @@ export const getHotTopicList = (data) => {
 };
 
 /* ************* 我的 相关接口 ******************* */
-
-// 获取用户信息 , 歌单，收藏，mv, dj 数量
+// 获取用户详情
+export const getUserDetail = (data) => {
+  return GET('/user/detail', data)
+};
 export const getUserSubcount = (data) => {
   return GET('/user/subcount', data)
 };
@@ -131,4 +133,8 @@ export const getVideoUrl = (data) => {
 // 获取视频相关信息
 export const getVideoInfo = (data) => {
   return GET('/video/detail/info', data)
+}
+/* ************* 歌单 相关接口 ******************* */
+export const getPlayListDetail = (data) => {
+  return GET('/playlist/detail', data)
 }

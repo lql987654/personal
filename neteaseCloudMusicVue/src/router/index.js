@@ -192,6 +192,25 @@ export default new Router({
         }
       ]
     },
+    /*  歌单页面路由  */
+    {
+      path: '/playlist',
+      name: "playlist",
+      meta: {
+        requireAuth : true
+      },
+      component: r => require.ensure([], () => r(require('@/pages/app/index.vue')), 'index'),
+      children: [
+        {
+          path: '/playlist/:id',
+          meta: {
+            requireAuth : true
+          },
+          name: 'PlayListPage',
+          component: r => require.ensure([], () => r(require('@/pages/app/play-list/index/index.vue')), 'PlayListPage')
+        },
+      ]
+    },
   ]
 })
 

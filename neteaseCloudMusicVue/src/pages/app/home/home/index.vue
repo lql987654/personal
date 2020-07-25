@@ -29,7 +29,7 @@
           <h2>{{ appBlockList1.uiElement.mainTitle.title }} - {{ appBlockList1.uiElement.subTitle.title }}</h2>
           <a href="javascript:;" class="music-list-item-button">{{ appBlockList1.uiElement.button.text }}</a>
           <div class="list-scroll-box">
-            <div class="scroll-item" v-for="(item, index) in appBlockList1.creatives" :key="index">
+            <div class="scroll-item" v-for="(item, index) in appBlockList1.creatives" :key="index" @click="toPlayListPage(item.creativeId)">
               <img :src="item.uiElement.image.imageUrl">
               <p>{{ item.uiElement.mainTitle.title.substring(0, 14) }}...</p>
               <span>{{ item.resources[0].resourceExtInfo.playCount }}</span>
@@ -40,7 +40,7 @@
           <h2>{{ appBlockList2.uiElement.mainTitle.title }} - {{ appBlockList2.uiElement.subTitle.title }}</h2>
           <a href="javascript:;" class="music-list-item-button">{{ appBlockList2.uiElement.button.text }}</a>
           <div class="list-scroll-box">
-            <div class="scroll-item" v-for="(item, index) in appBlockList2.creatives" :key="index">
+            <div class="scroll-item" v-for="(item, index) in appBlockList2.creatives" :key="index" @click="toPlayListPage(item.creativeId)">
               <img :src="item.uiElement.image.imageUrl">
               <p>{{ item.uiElement.mainTitle.title.substring(0, 14) }}...</p>
               <span>{{ item.resources[0].resourceExtInfo.playCount }}</span>
@@ -118,6 +118,9 @@
       },
       toSearchPage() {
         this.$router.push({ path: '/search/index' });
+      },
+      toPlayListPage(id) {
+        this.$router.push({ path: `/playlist/${id}` });
       }
     }
   }

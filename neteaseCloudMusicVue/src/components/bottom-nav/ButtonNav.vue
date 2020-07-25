@@ -63,6 +63,7 @@
     background: #fff;
     border-top: 1px solid #cdcdcd;
     display: flex;
+    z-index: 9;
   }
 
   .button-nav .button-bav-item {
