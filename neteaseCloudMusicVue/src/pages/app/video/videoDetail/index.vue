@@ -12,6 +12,7 @@
     getVideoDetail,
     getVideoUrl,
     getVideoInfo,
+    getSimiVideo
   } from '@/service'
   export default {
     name: "videoDetail",
@@ -26,6 +27,7 @@
       this.getVideoDetailFunc()
       this.getVideoUrlFunc()
       this.getVideoInfoFunc()
+      this.getSimiVideoFunc()
     },
     methods: {
       getVideoDetailFunc() {
@@ -41,6 +43,11 @@
       },
       getVideoInfoFunc() {
         getVideoInfo({vid: this.$route.params.id}).then( res=> {
+          console.log(res)
+        })
+      },
+      getSimiVideoFunc() {
+        getSimiVideo({id: this.$route.params.id}).then( res=> {
           console.log(res)
         })
       }

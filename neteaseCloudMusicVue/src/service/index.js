@@ -134,7 +134,20 @@ export const getVideoUrl = (data) => {
 export const getVideoInfo = (data) => {
   return GET('/video/detail/info', data)
 }
+// 获取相似视频
+export const getSimiVideo = (data) => {
+  return GET('/related/allvideo', data)
+}
 /* ************* 歌单 相关接口 ******************* */
 export const getPlayListDetail = (data) => {
   return GET('/playlist/detail', data)
+}
+/* ************* MV 相关接口 ******************* */
+// 获取视频相关评论
+export const getCommentMv = (data) => {
+  return GET('/comment/mv', data)
+}
+// 获取视频相似mv
+export const getSimiMv = (data) => {
+  return GET('/simi/mv', data)
 }

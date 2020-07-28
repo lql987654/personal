@@ -71,7 +71,6 @@
 <style scoped>
   .login-box {
     width: 7.5rem;
-    height: 100%;
     background: url("../../assets/bg/login-bg.jpg") top center;
     background-size: 100%;
     overflow: hidden;
