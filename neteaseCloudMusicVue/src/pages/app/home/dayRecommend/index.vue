@@ -1,5 +1,6 @@
 <template>
   <div class="day-recommend">
+    <PageHeader :headerText="headerText"></PageHeader>
     <div class="day-recommend-banner">
       <img src="../../../../assets/bg/day-recommend-bg.jpg">
     </div>
@@ -20,12 +21,17 @@
     getHistoryRecommendList,
   } from '@/service'
 
+  import PageHeader from "@/components/page-header/PageHeader"
   export default {
     name: "index",
+    components: {
+      PageHeader
+    },
     data() {
       return{
         recommendList: '',
-        date: []
+        date: [],
+        headerText: '每日推荐'
       }
     },
     mounted() {

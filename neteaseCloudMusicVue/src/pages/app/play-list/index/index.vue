@@ -1,6 +1,6 @@
 <template>
   <div class="play-list-container" v-if="PlayListStatus">
-    <h2><em @click="returnBack"></em>{{ PlayListDetail.playlist.name }}</h2>
+    <PageHeader :headerText="PlayListDetail.playlist.name"></PageHeader>
     <div class="play-list-content">
       <div class="play-list-item" v-for="(item, index) in PlayListDetail.playlist.tracks" :key="index" @click="toPlayMusic(item.id)">
         <img :src="item.al.picUrl">
@@ -17,9 +17,12 @@
   import {
     getPlayListDetail,
   } from '@/service'
-
+  import PageHeader from "@/components/page-header/PageHeader"
   export default {
     name: "PlayListPage",
+    components: {
+      PageHeader
+    },
     data() {
       return {
         PlayListStatus: false,
