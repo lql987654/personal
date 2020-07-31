@@ -1,0 +1,10 @@
+{
+  "android": {
+    "release": {
+      "keystore": "folkmusic.keystore",
+      "alias": "folkmusic",
+      "storePassword": "111111",
+      "password": "111111"
+    }
+  }
+}
