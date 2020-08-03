@@ -1,2 +1,0 @@
-webpackJsonp([5],{"4aQ2":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{},[this._v("404")])},staticRenderFns:[]};var i=n("VU/8")({name:"NotFound"},a,!1,function(e){n("bPid")},"data-v-cdad409a",null);t.default=i.exports},bPid:function(e,t){}});
-//# sourceMappingURL=5.e94d66534bbd699f7e53.js.map
